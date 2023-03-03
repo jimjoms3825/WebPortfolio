@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+}
+
+:root {
+    --main-bg-color: #161853;
+    --secondary-bg-color: #292C6D;
+    --splash-color-1: #FAEDF0;
+    --splash-color-2: #E23E57;
+    --main-text-color: #CCCCCC;
+    --secondary-text-color: #ccccAA;
+  }
+
+
+  /*-------------Index----------------*/
+#logo{
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    background-size: cover;
+}
+
+body{
+    min-height: 100%;
+    background: var(--main-bg-color);
+}
+
+header{
+    position: relative;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background: rgba(0, 0, 0, .8);
+}
+
+header .logo {
+    color: var(--splash-color-2);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+section{
+    height: 100%;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .3;
+    animation: fadeIn 5s;
+
+}
+
+.index-body{
+    position: relative;
+    width: 100%;
+    padding: 30px 100px;
+    margin: 30px, 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: color-burn;
+}
+
+.index-body h1{
+    margin-bottom: 50px;
+    font-size: 3em;
+    margin-right: 100%;
+}
+
+.typewriter{
+    font-family: monospace;
+    color:#0000;
+    background:
+        linear-gradient(-90deg, var(--splash-color-2), 5px,#0000 0) 10px 0,
+        linear-gradient(var(--secondary-text-color) 0 0) 0 0;
+    background-size:calc(var(--n)*1ch) 200%;
+    -webkit-background-clip:padding-box,text;
+    background-clip:padding-box,text;
+    background-repeat:no-repeat;
+    opacity: 0;
+    animation: 
+        fadeInFromNone 0s forwards,
+        blink .7s infinite steps(1),   
+        type calc(var(--n)*.15s) steps(var(--n) ) forwards;
+    animation-delay: var(--d);
+}
+
+.index-body h2{
+    max-width: 800px;
+    opacity: 0;
+    animation: 
+        fadeInFromNone 1s forwards;
+    animation-delay: 4s;
+}
+
+.header-text{
+    padding: 10px;
+    color: var(--splash-color-2);
+}
+
+.title-text{
+    color: var(--main-text-color);
+    font-size: 60px;
+}
+
+
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+ul li a{
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--splash-color-2);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+ul li a:hover::after{
+    width: 100%;
+}
+.call-to-action{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.call-to-action-header{
+    z-index: 2;
+    text-align: center;
+    color: #E23E57;
+    font-size: 3em;
+    flex: 100%;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.raise-button:hover,
+.raise-button:focus {
+    background-color: var(--splash-color-2);
+    color: var(--splash-color-1);
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--splash-color-2);
+}
+.raise-button {
+    position: relative;
+    font-size: 1.5em;
+    background: none;
+    border: 2px solid;
+    line-height: 1;     
+    margin: 2.5em 2.5em;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: 0.5s;
+    z-index: 10;
+    
+}
+
+/*--------About---------*/
+#about{
+    padding: 80px, 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+.about-col-1{
+    width: 20%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--splash-color-2);
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--splash-color-2);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links:hover::after{
+    width: 100%;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: var(--splash-color-2);
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+.gmap-container{
+    background: var(--splash-color-1);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.gmap-header{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 14px;
+    color: var(--splash-color-2);
+
+}
+
+.gmap-canvas{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.gmap-iframe{
+    border: 2px solid black;
+
+}
+
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: .3; }
+}
+
+@keyframes type{
+    from {background-size:0 200%}
+  }
+  @keyframes blink{
+    50% {background-position:0 -100%,0 0}
+  }
+
+  @keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+/*-------------CSS for small screen------------*/
+@media only screen and (max-width: 700px){
+    .title-text{
+        font-size: 24px;
+    }
+    header{
+        padding: 50px;
+    }
+    .index-body{
+        padding: 50px;
+    }
+    .index-body h1{
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+    .index-body h2{
+        font-size: 1.2em;
+    }
+}
