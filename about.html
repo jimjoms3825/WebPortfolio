@@ -11,50 +11,71 @@
 <body>
     <script type = "text/javascript" src="header.js"></script>  
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/headshot.jpg">
+        <div class="about-section">
+            <div class="about-col-element">
+            </div>
+            <div class="about-col-element black-card">
+                <h1 class="sub-title">Hi! I'm James.</h1>
+                <p class="white-text">
+                    This is the area where I am going to write about myself even though
+                    I maybe am not into such things. It is probably a necessary evil.
+                </p>
+            </div>
+        </div>
+        <div class="about-section"style="--d:1s">
+            <div class="about-col-element black-card">
+                <h1 class="sub-title">Credentials</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me:</h1>
-                    <p>write some things about you</p>
-    
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="education">
-                        <ul>
-                            <li><span>Athabasca University<br>2019 - 2022 GPA: 3.75</span><br>Bachelors of Science in Computing and Information Systems<br>Minor in Business Administration</li>
-                            <li><span>UBC Sauder Shool of Business<br>2016</span><br>Real Estate Certification and Licensing</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="skills">
-                        <ul>
-                            <li><span>UI/UX</span><br>Designing Human-User interfaces</li>
-                            <li><span>Development</span><br>Full-stack Development</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Andres Electronic Experts<br>2018 - 2020, 2022 - 2023 </span><br>Salesman</li>
-                            <li><span>Self-Employed<br>2016 - 2018</span><br>Liscensed Real Estate Agent</li>
-                        </ul>
-                    </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>Athabasca University<br>2019 - 2022 GPA: 3.75</span><br>Bachelors of Science in Computing and Information Systems<br>Minor in Business Administration</li>
+                        <li><span>UBC Sauder Shool of Business<br>2016</span><br>Real Estate Certification and Licensing</li>
+                    </ul>
                 </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Human-User interfaces</li>
+                        <li><span>Development</span><br>Full-stack Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Andres Electronic Experts<br>2018 - 2020, 2022 - 2023 </span><br>Salesman</li>
+                        <li><span>Self-Employed<br>2016 - 2018</span><br>Liscensed Real Estate Agent</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-col-element">
+            </div>
+        </div>
+        <div class="about-section" style="--d:2s">
+            <div class="about-col-element">
+            </div>
+            <div class="about-col-element black-card">
+                <h1 class="sub-title">Hi! I'm James.</h1>
+                <p class="white-text">
+                    This is the area where I am going to write about myself even though
+                    I maybe am not into such things. It is probably a necessary evil.
+                </p>
+            </div>
+        </div>
+        <div class="about-section" style="--d:3s">
+            <div class="about-col-element black-card">
+                <h1 class="sub-title">Hi! I'm James.</h1>
+                <p class="white-text">
+                    This is the area where I am going to write about myself even though
+                    I maybe am not into such things. It is probably a necessary evil.
+                </p>
+            </div>
+            <div class="about-col-element">
             </div>
         </div>
     </div>
-    <div class="gmap-container">
-        <div class="gmap-header">
-            <p>Located in beautiful Medicine Hat, Alberta!</p>
-        </div>
-        <div class="gmap-canvas">
-            <iframe class="gmap-iframe" width="90%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Medicine%20Hat&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-        </div>
-    </div>
+
     <script>
         var tabLinks = document.getElementsByClassName("tab-links");
         var tabContents = document.getElementsByClassName("tab-contents");
