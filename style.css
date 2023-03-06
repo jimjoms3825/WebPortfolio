@@ -126,10 +126,18 @@ ul li a:hover::after{
     width: 40vw;
 }
 
-.programming-scene{
-    display:block;
+.js-draw{
+    position: absolute;
     width:100%;
     height: 100%;
+    z-index: -1;
+}
+
+#index-button{
+    opacity: 0;
+    animation: 
+        fadeInFromNone 1s forwards;
+    animation-delay: 5s;
 }
 
 
@@ -230,29 +238,47 @@ ul li a:hover::after{
 
 /*-------------Portfolio------------*/
 
-.gmap-container{
-    background: var(--splash-color-1);
-    width: 90%;
-    max-width: 800px;
-    border-radius: 10px;
-    margin: auto;
-    border: 2px solid var(--splash-color-2);
+
+
+/*-------------Contact------------*/
+
+.contact-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vh 2vw;
+    flex-direction: column;
+    align-items: center;
 }
 
-.gmap-header h1{
+.contact-element{
+    flex-basis: 40%;
+    padding: 2vh 2vw;
+    flex-direction: column;
     display: flex;
-    justify-content: center;
-    padding: 20px;
-    font-size: 1.4em;
-    color: var(--secondary-text-color);
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.contact-element h1{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 4em;
+    letter-spacing: 3px;
+}
+
+.social-media-button img{
+    width: 60px;
+    min-width: 60px;
+}
+.gmap-container{
+    width: 90%;
+    max-width: 50vw;
 }
 
 .gmap-canvas{
-    padding: 10px;
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
+    width: 100%;
 }
 
 
