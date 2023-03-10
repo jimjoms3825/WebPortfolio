@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,125 @@
 </head>
 
 <body>
-    <script type = "text/javascript" src="header.js"></script>  
-   
+    <script type="text/javascript" src="header.js"></script>
+
+    <div class="potfolio-container">
+        <h1 class="portfolio-header">Projects</h1>
+        <div class="separator"></div>
+        <div class="tab-titles">
+            <p class="portfolio-tab-links active-link" onclick="displayAllElements()">View All</p>
+            <p class="portfolio-tab-links" onclick="displayElements('Unity-Developments')">Unity Developments</p>
+            <p class="portfolio-tab-links" onclick="displayElements('Game-Developments')">Game Developments</p>
+            <p class="portfolio-tab-links" onclick="displayElements('Web-Developments')">Web Developments</p>
+
+        </div>
+
+        <div class="portfolio-tab-contents">
+            <div class="portfolio-entry active-entry Unity-Developments">
+                <img src="images/Portfolio/tower.jpg">>
+                <div class="portfolio-text">
+                    <h1>Tower Defence - Web Game</h1>
+                    <h2>Written in C# in the Unity game engine. Deployed in WebGL.</h2>
+                    <h3>[In Development]</h3>
+                    <p>An in-development tower defence game where the player must defend their base from incoming waves
+                        of enemies using a variety of high-tech defence towers. The game will require a careful balance
+                        of resource management vs offensive ability to survive.</p>
+                    <div class="portfolio-button-container">
+                        <a id="portfolio-button" class="raise-button" href="about.html">Play Game</a>
+                        <a id="portfolio-button" class="raise-button" href="about.html">Repository</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-entry active-entry Unity-Developments">
+                <img src="images/Portfolio/PAT.jpg">
+                <div class="portfolio-text">
+                    <h1>Procedural Generation Project</h1>
+                    <h2>Written in C# in the Unity game engine. Deployed for desktop.</h2>
+                    <p>The primary prerogative of this development was to explore techniques for 3D procedural dungeon
+                        generation using a custom algorithm which stitches together designer made room objects in
+                        unbounded space, producing a highly variable interior environment with unbounded size. The
+                        development secondarily consisted of the surrounding game framework to integrate this algorithm
+                        into a larger project. This led to the development of a multi-octave perlin noise exterior
+                        terrain generator, behavior tree implementation for AI, and much more.</p>
+                        <div class="portfolio-button-container">
+                            <a id="portfolio-button" class="raise-button" href="about.html">More Info</a>
+                            <a id="portfolio-button" class="raise-button" href="about.html">Repository</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="portfolio-entry active-entry Game-Developments">
+                <img src="images/Portfolio/dungeon.jpg">>
+                <div class="portfolio-text">
+                    <h1>Dungeon Crawler - Android Game</h1>
+                    <h2>Engine and game written in Java using the Android Studio development environment.</h2>
+                    <p>A dungeon crawler - twin-stick shooter hybrid which employed procedurally generated levels, a
+                        variety of enemies and AI capabilities, bosses, and a shop.</p>
+                        <div class="portfolio-button-container">
+                            <a id="portfolio-button" class="raise-button" href="about.html">Gameplay Footage</a>
+                            <a id="portfolio-button" class="raise-button" href="about.html">Repository</a>
+                        </div>
+                </div>
+            </div>
+            <div class="portfolio-entry active-entry Game-Developments">
+                <img src="images/Portfolio/mani.jpg">
+                <div class="portfolio-text">
+                    <h1>The legend of Mani - Web Game</h1>
+                    <h2>Engine and game written in JavaScript using the PixiJS graphics library.</h2>
+                    <p>A turn based RPG development in the style of final fantasy. The game featured levelable
+                        characters, items, dynamic move sets, RPG elements, and a variety of enemy encounters.</p>
+                        <div class="portfolio-button-container">
+                            <a id="portfolio-button" class="raise-button" href="about.html">Play Game</a>
+                            <a id="portfolio-button" class="raise-button" href="about.html">Gameplay Footage</a>
+                            <a id="portfolio-button" class="raise-button" href="about.html">Repository</a>
+                        </div>
+                </div>
+            </div>
+            <div class="portfolio-entry active-entry Web-Developments">
+                <img src="images/Portfolio/portfolio.jpg">
+                <div class="portfolio-text">
+                    <h1>Portfolio Website</h1>
+                    <h2>Written in HTML, CSS, and JavaScript.</h2>
+                    <h3>[In Development]</h3>
+                    <p>A portfolio website to showcase my development activities.</p>
+                    <div class="portfolio-button-container">
+                        <a id="portfolio-button" class="raise-button" href="index.html">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tabLinks = document.getElementsByClassName("portfolio-tab-links");
+        var portfolioEntries = document.getElementsByClassName("portfolio-entry");
+
+
+        function displayElements(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (entry of portfolioEntries) {
+                if (entry.classList.contains(tabName)) {
+                    entry.classList.add("active-entry");
+                }
+                else {
+                    entry.classList.remove("active-entry");
+                }
+            }
+            event.currentTarget.classList.add("active-link");
+        }
+
+        function displayAllElements() {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (entry of portfolioEntries) {
+                entry.classList.add("active-entry");
+            }
+            event.currentTarget.classList.add("active-link");
+        }
+
+    </script>
 </body>
+
 </html>

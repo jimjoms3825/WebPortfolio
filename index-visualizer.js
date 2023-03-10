@@ -10,7 +10,7 @@ class Stage {
     this.height = height;
 
     this.options = {
-      rotation: 10,
+      rotation: -0.99,
       backgroundColor: '#fff',
       lineColor: '#000',
     };
